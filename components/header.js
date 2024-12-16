@@ -1,2 +1,2 @@
-var header = "<a href='index.html'><h1>developers-front-app</h1></a>";
-document.write(header);
+// var header = ;
+document.body.getElementsByTagName("header")[0].innerHTML += "<a href='index.html'><figure><img src='assets/logo.png' alt='logo' width='4%'></figure></a>";

@@ -19,26 +19,20 @@
     <script src="js/jquery/jquery.blockUI-2.70.0.min.js"></script>
     <script src="js/jquery/query.toast-1.3.2.min.js"></script>
     <script src="js/scripts.js"></script>
-    <script>
-
-    </script>
 </head>
 
 <body>
-
     <div id="app">
         <header>
-            <img src="assets/logo.png" alt="logo" width="4%">
-            <img src="assets/mongodb.png" alt="logo" width="4%">
-            <a href='index.html'>
-                <h1>developer-front-app</h1>
+            <a href="index.html">
+                <figure><img src="assets/logo.png" alt="logo" width="4%"></figure>
             </a>
         </header>
         <section>
             <nav>
                 <ul>
-                    <li><a href='formulario.html' class='a-menu'>Cadastro</a></li>
-                    <li><a href='buscar.html' class='a-menu'>Buscar</a></li>
+                    <li><a href="formulario.html" class="a-menu">Cadastro</a></li>
+                    <li><a href="buscar.html" class="a-menu">Buscar</a></li>
                 </ul>
             </nav>
             <div>
@@ -63,7 +57,7 @@
             </div>
         </section>
         <footer>
-            <address>&copy;Bruno Gressler da Silveira</address>
+            <address>©Bruno Gressler da Silveira</address>
         </footer>
     </div>
     <script>
@@ -113,7 +107,6 @@
                         });
                 },
                 async salvarDados() {
-                    console.log(this.request)
                     if (this.request !== undefined) {
                         if ($('#name').val() === '') {
                             toast(`Nome obrigatorio`, 'ERRO', 'error')
@@ -135,7 +128,7 @@
                                     if (response.status === 201) {
                                         toast(`Cliente ${text}`, 'OK', 'success')
                                         setTimeout(() => {
-                                            window.location.href= 'buscar.html'
+                                            window.location.href = 'buscar.html'
                                         }, 3000);
                                     } else {
                                         toast('Erro ao cadastrar', 'ERRO', 'error')
@@ -157,7 +150,7 @@
                                     if (response.status === 201) {
                                         toast(`Cliente ${text}`, 'OK', 'success')
                                         setTimeout(() => {
-                                            window.location.href= 'buscar.html'
+                                            window.location.href = 'buscar.html'
                                         }, 3000);
                                     } else {
                                         toast('Erro ao alterar', 'ERRO', 'error')

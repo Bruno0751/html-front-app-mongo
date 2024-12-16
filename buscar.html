@@ -23,19 +23,17 @@
 </head>
 
 <body>
-
     <div id="app">
         <header>
-            <img src="assets/logo.png" alt="logo" width="4%">
-            <a href='index.html'>
-                <h1>developer-front-app</h1>
+            <a href="index.html">
+                <figure><img src="assets/logo.png" alt="logo" width="4%"></figure>
             </a>
         </header>
         <section>
             <nav>
                 <ul>
-                    <li><a href='formulario.html' class='a-menu'>Cadastro</a></li>
-                    <li><a href='buscar.html' class='a-menu'>Buscar</a></li>
+                    <li><a href="formulario.html" class="a-menu">Cadastro</a></li>
+                    <li><a href="buscar.html" class="a-menu">Buscar</a></li>
                 </ul>
             </nav>
             <table class='tabela'>
@@ -72,7 +70,7 @@
             </table>
         </section>
         <footer>
-            <address>&copy;Bruno Gressler da Silveira</address>
+            <address>©Bruno Gressler da Silveira</address>
         </footer>
     </div>
     <script>
@@ -130,8 +128,8 @@
                             throw new Error('Erro ao deletar recurso');
                         }
                     } catch (error) {
-                        alert('ERROR IN REQUEST');
-                        console.error('Erro:', error);
+                        toast('Erro ao enviar requisição.', 'ERRO', 'error')
+                        throw new Error('Erro ao enviar requisição.');
                     }
                 }
             }
